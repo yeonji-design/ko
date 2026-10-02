@@ -2,9 +2,7 @@
 
 :root {
   --bg:#111411;
-  --surface:#1c211d;
   --text:#f2f4ef;
-  --muted:#a2aaa3;
   --blue:#4d68db;
   --paper:#e6e9e3;
   --ink:#171b18;
@@ -27,14 +25,12 @@ a { color:inherit; text-decoration:none; }
   gap:10px;
 }
 .bento-card { min-width:0; min-height:0; overflow:hidden; border-radius:18px; }
-.card-label { margin:0; color:#aeb4ae; font-size:11px; font-weight:600; letter-spacing:.02em; }
 .card-head { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; }
 .card-head h2 { margin:0; font-size:clamp(24px,2.3vw,36px); line-height:1; letter-spacing:-.045em; font-weight:680; }
-.card-head>span { font-size:10px; line-height:1.45; text-align:right; }
 
 .about-card {
   grid-column:1/5;
-  grid-row:1/6;
+  grid-row:1/8;
   padding:22px 24px;
   display:flex;
   flex-direction:column;
@@ -43,19 +39,27 @@ a { color:inherit; text-decoration:none; }
   border-radius:0;
 }
 .about-card h1 {
-  margin:0 0 18px;
+  margin:0 0 26px;
   max-width:560px;
   font-size:clamp(34px,3.4vw,54px);
   line-height:.98;
   letter-spacing:-.055em;
   font-weight:650;
 }
-.lead { max-width:390px; margin:0; color:#a9b0aa; font-size:clamp(12px,1vw,15px); line-height:1.55; letter-spacing:-.018em; }
+.about-card p { margin:0; color:#a9b0aa; font-size:clamp(12px,1vw,15px); line-height:1.55; font-weight:400; letter-spacing:-.018em; }
+.lead { max-width:390px; }
+.about-details { max-width:390px; margin-top:14px; display:grid; gap:7px; }
+.availability { display:flex; align-items:flex-start; gap:7px; font-family:"Iowan Old Style",Baskerville,Georgia,serif; font-weight:400; font-style:normal; }
+.availability .status-dot { width:6px; height:6px; margin-top:calc(.775em - 3px); flex:0 0 auto; border-radius:50%; background:#6f8cff; box-shadow:0 0 0 4px rgba(111,140,255,.12); }
+.availability-copy { flex:1; }
+.availability strong { color:#d8ddd7; font-weight:600; }
+.availability a { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px; transition:color .2s ease; }
+.availability a:hover { color:#8fa3ff; font-style:italic; }
 
-.map-card { grid-column:1/5; grid-row:6/13; display:flex; flex-direction:column; padding:22px 24px 10px; background:var(--paper); color:var(--ink); }
-.map-card .card-head { position:relative; z-index:1; }
-.map-card .card-head>span { color:#5d635e; }
-.world-map { width:120%; flex:1; min-height:0; display:block; margin:-8px 0 0 -10%; }
+.map-card { grid-column:9/13; grid-row:7/13; display:flex; flex-direction:column; padding:22px 24px 10px; background:var(--paper); color:var(--ink); }
+.map-card .card-head { position:relative; z-index:1; align-items:center; }
+.map-note { margin:0; color:#6c736d; font-family:"Iowan Old Style",Baskerville,Georgia,serif; font-size:13px; line-height:1.4; font-weight:400; font-style:italic; text-align:right; }
+.world-map { width:120%; flex:1; min-height:0; display:block; margin:-8px 0 0 -10%; transform:translateY(18px); }
 .land-dots circle { fill:#bec4bd; }
 .city circle:not(.city-pulse),.city-label { fill:var(--blue); }
 .city-pulse { fill:none; stroke:var(--blue); stroke-width:2; transform-box:fill-box; transform-origin:center; animation:cityPulse 2.5s ease-out infinite; }
@@ -67,7 +71,6 @@ a { color:inherit; text-decoration:none; }
 @keyframes cityPulse { 0% { transform:scale(.25); opacity:.8 } 80%,100% { transform:scale(1.2); opacity:0 } }
 
 .experience-card { grid-column:5/10; grid-row:1/7; padding:22px 28px 18px; display:flex; flex-direction:column; background:var(--blue); color:#f7f8ff; }
-.experience-card .card-head>span { color:#ccd4ff; }
 .experience-card ol { list-style:none; margin:auto 0 0; padding:0; }
 .experience-card li { min-height:46px; display:grid; grid-template-columns:minmax(110px,18%) minmax(0,1fr) 90px; align-items:center; gap:14px; padding:7px 0; border-bottom:1px solid rgba(255,255,255,.22); }
 .experience-card li:last-child { border-bottom:0; }
@@ -77,7 +80,6 @@ a { color:inherit; text-decoration:none; }
 .experience-card time { justify-self:end; text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
 
 .onside-card { grid-column:10/13; grid-row:1/7; padding:22px 20px; display:flex; flex-direction:column; background:#232923; }
-.onside-card .card-head>span { color:#9ea59f; }
 .project-list { margin-top:auto; }
 .project-list a { min-height:48px; display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px; border-bottom:1px solid #485049; }
 .project-list a:last-child { border-bottom:0; }
@@ -86,18 +88,19 @@ a { color:inherit; text-decoration:none; }
 .project-list a:hover strong { color:#b9c4ee; transform:translateX(5px); }
 .project-list a:hover i { transform:rotate(-45deg); }
 
-.links-card { grid-column:9/13; grid-row:7/13; padding:20px; display:flex; flex-direction:column; background:#dce2f3; color:var(--ink); }
-.links-card .card-label { color:#59605b; }
-.links-card .card-head>span { white-space:nowrap; }
-.link-list { margin-top:auto; }
-.link-list a { min-height:48px; display:grid; grid-template-columns:1fr auto; align-items:center; gap:8px; border-bottom:1px solid rgba(23,26,24,.25); transition:background-color .22s ease; }
-.link-list a:last-child { border-bottom:0; }
-.link-list a:hover { background:rgba(77,104,219,.1); }
-.link-list a strong { transition:transform .22s cubic-bezier(.2,.7,.2,1),color .22s; }
-.link-list a:hover strong { color:var(--blue); transform:translateX(7px); }
-.link-list strong { font-size:15px; letter-spacing:-.02em; }
+.links-card { grid-column:1/5; grid-row:8/13; padding:20px; display:flex; flex-direction:column; background:#dce2f3; color:var(--ink); }
+.link-list { margin-top:auto; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0; }
+.link-list a { min-height:76px; padding:14px; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:6px; border:0; border-radius:0; transition:background-color .22s ease; }
+.link-list a:nth-child(1) { border-right:1px solid rgba(23,26,24,.24); border-bottom:1px solid rgba(23,26,24,.24); }
+.link-list a:nth-child(2) { border-bottom:1px solid rgba(23,26,24,.24); }
+.link-list a:nth-child(3) { grid-column:2; grid-row:2; }
+.link-list a:nth-child(4) { grid-column:1; grid-row:2; border-right:1px solid rgba(23,26,24,.24); }
+.link-list a:hover { background:rgba(255,255,255,.24); }
+.link-list a strong { transition:color .22s ease; }
+.link-list a:hover strong { color:var(--blue); }
+.link-list strong { min-width:0; color:#2b302c; font-family:"Iowan Old Style",Baskerville,Georgia,serif; font-size:clamp(14px,1.1vw,17px); line-height:1.2; font-weight:400; font-style:italic; letter-spacing:-.01em; overflow-wrap:anywhere; }
 .link-list i { width:22px; height:22px; margin-right:6px; display:grid; place-items:center; color:var(--blue); font-size:14px; line-height:1; font-style:normal; transform-box:border-box; transform-origin:50% 50%; transition:transform .24s cubic-bezier(.2,.7,.2,1); }
-.link-list a:hover i { transform:rotate(-45deg); }
+.link-list a:hover i { transform:translateX(2px) rotate(-45deg); }
 
 .profile-card { grid-column:5/9; grid-row:7/13; padding:20px 22px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto 1fr auto; gap:10px 20px; background:#1b201c; color:var(--text); border:1px solid #303731; }
 .profile-card .card-head { grid-column:1/-1; }
@@ -111,7 +114,7 @@ a { color:inherit; text-decoration:none; }
 
 @media (max-width:900px) {
   html,body,#root { height:auto; min-height:100%; overflow:auto; }
-  .bento-board { height:auto; padding:8px 10px 14px; grid-template-columns:1fr; grid-template-rows:none; grid-template-areas:"about" "map" "experience" "profile" "links"; }
+  .bento-board { height:auto; padding:8px 10px 14px; grid-template-columns:1fr; grid-template-rows:none; }
   .about-card,.map-card,.experience-card,.onside-card,.profile-card,.links-card { grid-column:auto; grid-row:auto; }
   .about-card { min-height:480px; }
   .about-card h1 { font-size:clamp(36px,10vw,52px); }
@@ -130,8 +133,6 @@ a { color:inherit; text-decoration:none; }
   .bento-card { border-radius:15px; }
   .about-card,.map-card,.experience-card,.profile-card { padding-left:18px; padding-right:18px; }
   .world-map { margin-left:-14%; width:128%; }
-  .experience-card li { padding:8px 0; }
-  .experience-card li div { grid-template-columns:1fr; gap:3px; }
+  .experience-card li { grid-template-columns:1fr; gap:3px; padding:8px 0; }
   .profile-card { grid-template-columns:1fr; grid-template-rows:auto auto auto; }
-  .profile-card>a { grid-column:1; }
 }
