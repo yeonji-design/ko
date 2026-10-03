@@ -36,7 +36,7 @@ function App() {
     <main className="bento-board">
       <section className="bento-card about-card">
         <h1>Hi, I’m Yeonji</h1>
-        <p className="lead">복잡한 AI·데이터 기술을 명확하고 사용하기 쉬운 제품 경험으로 전환하는 프로덕트 디자이너입니다. 글로벌 기업인 Intuit 미국 본사에서 데이터 엔지니어, 프로덕트 팀, 법무·보안 조직이 사용하는 AI·데이터 플랫폼의 핵심 워크플로우를 설계해왔습니다.</p>
+        <p className="lead">복잡한 AI·데이터 기술을 명확하고 사용하기 쉬운 제품 경험으로 전환하는 프로덕트 디자이너입니다. 글로벌 핀테크 기업인 Intuit 미국 본사에서 데이터 엔지니어, 프로덕트 팀, 법무·보안 조직이 사용하는 AI·데이터 플랫폼의 핵심 워크플로우를 설계해왔습니다.</p>
         <div className="about-details">
           <p>AI 도구를 디자인 과정 전반에 능숙하게 활용해 리서치, 아이데이션, 프로토타이핑의 속도와 완성도를 높입니다.</p>
           <p className="availability"><span className="status-dot" aria-hidden="true"></span><span className="availability-copy">Hiring a <strong>product designer</strong> or <strong>product manager</strong>? <a href="mailto:yeonjikim.design@gmail.com">Let’s talk!</a></span></p>
@@ -70,7 +70,7 @@ function App() {
 
       <aside className="bento-card profile-card">
         <div className="card-head"><h2>Education</h2></div>
-        <div className="school"><strong>University of Michigan 🇺🇸</strong><span className="degree">석사</span><p>Information, UX Design & Research</p></div>
+        <div className="school"><strong>University of Michigan 🇺🇸</strong><span className="degree">석사</span><p>Information - UX Design & Research</p></div>
         <div className="school"><strong>이화여자대학교 🇰🇷</strong><span className="degree">학사</span><p>컴퓨터공학 · 디지털인문학</p></div>
       </aside>
 
