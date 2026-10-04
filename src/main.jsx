@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 import { geoContains, geoNaturalEarth1 } from 'd3-geo';
@@ -6,6 +6,38 @@ import { feature } from 'topojson-client';
 import worldData from 'world-atlas/land-110m.json';
 
 const land = feature(worldData, worldData.objects.land);
+
+function DraggableSticker({ className = '', label, children }) {
+  const elementRef = useRef(null);
+  const dragRef = useRef({ pointerId:null, startX:0, startY:0, x:0, y:0 });
+
+  const handlePointerDown = event => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    const sticker = elementRef.current;
+    dragRef.current = { ...dragRef.current, pointerId:event.pointerId, startX:event.clientX, startY:event.clientY };
+    sticker.setPointerCapture(event.pointerId);
+    sticker.classList.add('is-dragging');
+  };
+  const handlePointerMove = event => {
+    const drag = dragRef.current;
+    if (drag.pointerId !== event.pointerId) return;
+    const nextX = drag.x + event.clientX - drag.startX;
+    const nextY = drag.y + event.clientY - drag.startY;
+    elementRef.current.style.setProperty('--drag-x', `${nextX}px`);
+    elementRef.current.style.setProperty('--drag-y', `${nextY}px`);
+  };
+  const handlePointerUp = event => {
+    const drag = dragRef.current;
+    if (drag.pointerId !== event.pointerId) return;
+    drag.x += event.clientX - drag.startX;
+    drag.y += event.clientY - drag.startY;
+    drag.pointerId = null;
+    elementRef.current.classList.remove('is-dragging');
+  };
+
+  return <button ref={elementRef} className={`keyword-sticker ${className}`} type="button" aria-label={`${label} sticker. Drag to move.`}
+    onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={handlePointerUp}>{children}</button>;
+}
 
 function DotWorldMap() {
   const projection = geoNaturalEarth1().fitExtent([[54, 34], [946, 430]], land);
@@ -77,12 +109,20 @@ function App() {
       <nav className="bento-card links-card" aria-label="Contact and portfolio links">
         <div className="card-head"><h2>More about me</h2></div>
         <div className="link-list">
-          <a href="./assets/Yeonji_Kim_Portfolio.pdf" target="_blank" rel="noreferrer"><strong>portfolio (pdf)</strong><i>→</i></a>
-          <a href="./assets/Yeonji_Kim_Resume.pdf" target="_blank" rel="noreferrer"><strong>resume</strong><i>→</i></a>
-          <a href="https://linkedin.com/in/yeonji-kim/" target="_blank" rel="noreferrer"><strong>linkedin</strong><i>→</i></a>
-          <a href="mailto:yeonjikim.design@gmail.com"><strong>email</strong><i>→</i></a>
+          <a href="./assets/Yeonji_Kim_Portfolio.pdf" target="_blank" rel="noreferrer"><strong>portfolio (pdf)</strong></a>
+          <a href="./assets/Yeonji_Kim_Resume.pdf" target="_blank" rel="noreferrer"><strong>resume</strong></a>
+          <a href="https://linkedin.com/in/yeonji-kim/" target="_blank" rel="noreferrer"><strong>linkedin</strong></a>
+          <a href="mailto:yeonjikim.design@gmail.com"><strong>email</strong></a>
         </div>
       </nav>
+
+      <div className="sticker-layer" aria-label="Draggable keyword stickers">
+        <DraggableSticker className="sticker-systems" label="Systems Thinking">Systems<br />Thinking</DraggableSticker>
+        <DraggableSticker className="sticker-strategy" label="Product Strategy">Product Strategy</DraggableSticker>
+        <DraggableSticker className="sticker-enterprise" label="Enterprise UX">Enterprise UX</DraggableSticker>
+        <DraggableSticker className="sticker-ai" label="Designing with AI">Designing<br />with AI</DraggableSticker>
+        <DraggableSticker className="sticker-zero" label="0 to 1">0 → 1</DraggableSticker>
+      </div>
     </main>
   </>;
 }
