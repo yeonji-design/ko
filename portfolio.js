@@ -24114,26 +24114,61 @@
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "about-details",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "AI 도구를 디자인 과정 전반에 능숙하게 활용해 리서치, 아이데이션, 프로토타이핑의 속도와 완성도를 높입니다." }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-								className: "availability",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "status-dot",
-									"aria-hidden": "true"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-									className: "availability-copy",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "AI 도구를 디자인 과정 전반에 능숙하게 활용해 리서치, 아이데이션, 프로토타이핑의 속도와 완성도를 높입니다." }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "availability",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "status-dot",
+										"aria-hidden": "true"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "availability-copy",
+										children: [
+											"Hiring a ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "product designer" }),
+											" or ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "product manager" }),
+											"? ",
+											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+												href: "mailto:yeonjikim.design@gmail.com",
+												children: "Let’s talk!"
+											})
+										]
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+									className: "about-links",
+									"aria-label": "Contact and portfolio links",
 									children: [
-										"Hiring a ",
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "product designer" }),
-										" or ",
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "product manager" }),
-										"? ",
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											className: "about-link-portfolio",
+											href: "./assets/Yeonji_Kim_Portfolio.pdf",
+											target: "_blank",
+											rel: "noreferrer",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "portfolio (pdf)" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "↗" })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											className: "about-link-resume",
+											href: "./assets/Yeonji_Kim_Resume.pdf",
+											target: "_blank",
+											rel: "noreferrer",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "resume" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "↗" })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											className: "about-link-linkedin",
+											href: "https://linkedin.com/in/yeonji-kim/",
+											target: "_blank",
+											rel: "noreferrer",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "linkedin" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "↗" })]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+											className: "about-link-email",
 											href: "mailto:yeonjikim.design@gmail.com",
-											children: "Let’s talk!"
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "email" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "↗" })]
 										})
 									]
-								})]
-							})]
+								})
+							]
 						})
 					]
 				}),
@@ -24162,32 +24197,39 @@
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 					className: "bento-card onside-card",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "card-head",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "On the side" })
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "project-list",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								href: "https://rai-checker.vercel.app/",
-								target: "_blank",
-								rel: "noreferrer",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "AI Responsibility Checker" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "→" })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								href: "https://wisebuy.world",
-								target: "_blank",
-								rel: "noreferrer",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Luxury Price Finder" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "→" })]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-								href: "https://studyclub-plusplus.com/ko",
-								target: "_blank",
-								rel: "noreferrer",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Global Study Platform" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "→" })]
-							})
-						]
-					})]
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "card-head",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "On the side" })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "onside-note",
+							children: "Built with my friends, Claude Code and Codex."
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "project-list",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+									href: "https://rai-checker.vercel.app/",
+									target: "_blank",
+									rel: "noreferrer",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "AI Responsibility Checker" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "→" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+									href: "https://wisebuy.world",
+									target: "_blank",
+									rel: "noreferrer",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Luxury Price Finder" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "→" })]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+									href: "https://studyclub-plusplus.com/ko",
+									target: "_blank",
+									rel: "noreferrer",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Global Study Platform" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("i", { children: "→" })]
+								})
+							]
+						})
+					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
 					className: "bento-card profile-card",
@@ -24220,36 +24262,34 @@
 						})
 					]
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-					className: "bento-card links-card",
-					"aria-label": "Contact and portfolio links",
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					className: "bento-card lately-card",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "card-head",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "More about me" })
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Lately" })
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "link-list",
+						className: "lately-collage",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: "./assets/Yeonji_Kim_Portfolio.pdf",
-								target: "_blank",
-								rel: "noreferrer",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "portfolio (pdf)" })
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
+								className: "lately-item lately-pottery",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: "./assets/pottery.jpeg",
+									alt: "Ceramic pieces Yeonji enjoyed browsing"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figcaption", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "New hobby" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Browsing ceramics" })] })]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: "./assets/Yeonji_Kim_Resume.pdf",
-								target: "_blank",
-								rel: "noreferrer",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "resume" })
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
+								className: "lately-item lately-drama",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: "./assets/thedrama.jpeg",
+									alt: "The Drama film poster"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figcaption", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Favorite movie" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "The Drama" })] })]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: "https://linkedin.com/in/yeonji-kim/",
-								target: "_blank",
-								rel: "noreferrer",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "linkedin" })
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-								href: "mailto:yeonjikim.design@gmail.com",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "email" })
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
+								className: "lately-item lately-concert",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+									src: "./assets/bigbang.JPG",
+									alt: "BIGBANG concert Yeonji attended"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figcaption", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "I was there" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "BIGBANG concert!" })] })]
 							})
 						]
 					})]

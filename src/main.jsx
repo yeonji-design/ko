@@ -72,6 +72,12 @@ function App() {
         <div className="about-details">
           <p>AI 도구를 디자인 과정 전반에 능숙하게 활용해 리서치, 아이데이션, 프로토타이핑의 속도와 완성도를 높입니다.</p>
           <p className="availability"><span className="status-dot" aria-hidden="true"></span><span className="availability-copy">Hiring a <strong>product designer</strong> or <strong>product manager</strong>? <a href="mailto:yeonjikim.design@gmail.com">Let’s talk!</a></span></p>
+          <nav className="about-links" aria-label="Contact and portfolio links">
+            <a className="about-link-portfolio" href="./assets/Yeonji_Kim_Portfolio.pdf" target="_blank" rel="noreferrer"><span>portfolio (pdf)</span><i>↗</i></a>
+            <a className="about-link-resume" href="./assets/Yeonji_Kim_Resume.pdf" target="_blank" rel="noreferrer"><span>resume</span><i>↗</i></a>
+            <a className="about-link-linkedin" href="https://linkedin.com/in/yeonji-kim/" target="_blank" rel="noreferrer"><span>linkedin</span><i>↗</i></a>
+            <a className="about-link-email" href="mailto:yeonjikim.design@gmail.com"><span>email</span><i>↗</i></a>
+          </nav>
         </div>
       </section>
 
@@ -93,6 +99,7 @@ function App() {
 
       <section className="bento-card onside-card">
         <div className="card-head"><h2>On the side</h2></div>
+        <p className="onside-note">Built with my friends — Claude Code &amp; Codex.</p>
         <div className="project-list">
           <a href="https://rai-checker.vercel.app/" target="_blank" rel="noreferrer"><strong>AI Responsibility Checker</strong><i>→</i></a>
           <a href="https://wisebuy.world" target="_blank" rel="noreferrer"><strong>Luxury Price Finder</strong><i>→</i></a>
@@ -106,15 +113,23 @@ function App() {
         <div className="school"><strong>이화여자대학교 🇰🇷</strong><span className="degree">학사</span><p>컴퓨터공학 · 디지털인문학</p></div>
       </aside>
 
-      <nav className="bento-card links-card" aria-label="Contact and portfolio links">
-        <div className="card-head"><h2>More about me</h2></div>
-        <div className="link-list">
-          <a href="./assets/Yeonji_Kim_Portfolio.pdf" target="_blank" rel="noreferrer"><strong>portfolio (pdf)</strong></a>
-          <a href="./assets/Yeonji_Kim_Resume.pdf" target="_blank" rel="noreferrer"><strong>resume</strong></a>
-          <a href="https://linkedin.com/in/yeonji-kim/" target="_blank" rel="noreferrer"><strong>linkedin</strong></a>
-          <a href="mailto:yeonjikim.design@gmail.com"><strong>email</strong></a>
+      <section className="bento-card lately-card">
+        <div className="card-head"><h2>Lately</h2></div>
+        <div className="lately-collage">
+          <figure className="lately-item lately-pottery">
+            <img src="./assets/pottery.jpeg" alt="Ceramic pieces Yeonji enjoyed browsing" />
+            <figcaption><span>New hobby</span><strong>Browsing ceramics</strong></figcaption>
+          </figure>
+          <figure className="lately-item lately-drama">
+            <img src="./assets/thedrama.jpeg" alt="The Drama film poster" />
+            <figcaption><span>Recently watched</span><strong>The Drama</strong></figcaption>
+          </figure>
+          <figure className="lately-item lately-concert">
+            <img src="./assets/bigbang.JPG" alt="BIGBANG concert Yeonji attended" />
+            <figcaption><span>Last concert</span><strong>BIGBANG</strong></figcaption>
+          </figure>
         </div>
-      </nav>
+      </section>
 
       <div className="sticker-layer" aria-label="Draggable keyword stickers">
         <DraggableSticker className="sticker-systems" label="Systems Thinking">Systems<br />Thinking</DraggableSticker>
