@@ -73,6 +73,10 @@ a { color:inherit; text-decoration:none; }
 .about-links a i { width:1em; height:1em; display:grid; place-items:center; flex:0 0 auto; font-size:1em; line-height:1; font-style:normal; transform:translateY(.02em); }
 .about-links a::after { content:""; position:absolute; left:0; right:1.25em; bottom:-3px; height:1px; background:currentColor; transform:scaleX(0); transform-origin:left center; transition:transform .25s cubic-bezier(.2,.7,.2,1),color .2s ease; }
 .about-links a:hover { color:#d8ddd7; }
+.about-link-portfolio:hover { color:#f4e5a4 !important; }
+.about-link-resume:hover { color:#b9c5ff !important; }
+.about-link-linkedin:hover { color:#8edfd7 !important; }
+.about-link-email:hover { color:#ff9a86 !important; }
 .about-links a:hover::after,.about-links a:focus-visible::after { transform:scaleX(1); }
 .about-link-portfolio { left:1%; top:1px; transform:rotate(-1.5deg); }
 .about-link-resume { left:32%; top:39px; transform:rotate(1deg); }
