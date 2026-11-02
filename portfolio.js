@@ -24274,8 +24274,8 @@
 								className: "lately-item lately-pottery",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 									src: "./assets/pottery.jpeg",
-									alt: "Ceramic pieces Yeonji enjoyed browsing"
-								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figcaption", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "New hobby" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Browsing ceramics" })] })]
+									alt: "Ceramic pieces Yeonji enjoyed shopping"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figcaption", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "New hobby" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", { children: "Shopping ceramics" })] })]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
 								className: "lately-item lately-drama",

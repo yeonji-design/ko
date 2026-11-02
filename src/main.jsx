@@ -117,8 +117,8 @@ function App() {
         <div className="card-head"><h2>Lately</h2></div>
         <div className="lately-collage">
           <figure className="lately-item lately-pottery">
-            <img src="./assets/pottery.jpeg" alt="Ceramic pieces Yeonji enjoyed browsing" />
-            <figcaption><span>New hobby</span><strong>Browsing ceramics</strong></figcaption>
+            <img src="./assets/pottery.jpeg" alt="Ceramic pieces Yeonji enjoyed shopping" />
+            <figcaption><span>New hobby</span><strong>Shopping ceramics</strong></figcaption>
           </figure>
           <figure className="lately-item lately-drama">
             <img src="./assets/thedrama.jpeg" alt="The Drama film poster" />
